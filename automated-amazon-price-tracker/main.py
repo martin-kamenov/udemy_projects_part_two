@@ -39,7 +39,7 @@ message = f"{product_name} is now ${product_price}"
 
 
 def send_email():
-    with smtplib.SMTP_SSL("smtp.gmail.com") as connection:
+    with smtplib.SMTP_SSL("smtp.gmail.com", port=465) as connection:
         connection.login(user=EMAIl, password=PASSWORD)
         connection.sendmail(
             from_addr=EMAIl,
